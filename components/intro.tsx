@@ -2,14 +2,24 @@
 
 import Image from 'next/image'
 import React from 'react'
-import {motion} from 'framer-motion'
+import {motion, useInView} from 'framer-motion'
 import Link from 'next/link'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa'
+import { useActiveSectionContext } from '@/context/active-section-context'
 export default function Intro() {
+    const {setActiveSection} = useActiveSectionContext()
+    const {ref, inView} = useInView()
+    useEffect(()=>{
+        if (inView){
+            setActiveSection('Projects')
+        }
+    },[inView, setActiveSection])
   return (
-    <section className='mb-28 max-w-[50rem] text-center sm:mb-0'>
+    <section 
+        id = "home"
+        className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'>
         <div className='flex items-center justify-center'>
             <div className='relative'>
                 <motion.div

@@ -1,11 +1,29 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import {motion} from 'framer-motion'
+import SectionHeading from './section-heading'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context'
 export default function About() {
+    const {setActiveSection} = useActiveSectionContext()
+    const {ref, inView} = useInView()
+    useEffect(()=>{
+        if (inView){
+            setActiveSection('About')
+        }
+    },[inView, setActiveSection])
+    
+
   return (
-    <motion.section className='mb-28 max-w[45rem] text-center leading-8 sm:mb-40'>
-        <h2 className='text-3xl font-medium capitalize mb-8'> About me</h2>
+    <motion.section
+        ref = {ref}
+        id="about" 
+        className='mb-28 max-w[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'
+        initial = {{ opacity : 0, y : 100}}
+        animate = {{ opacity : 1, y: 0}}
+        transition={{delay: 0.175}}>
+        <SectionHeading>About me</SectionHeading>
         <p className="mb-3">
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
@@ -25,11 +43,11 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
+        <span className="italic">When I&apos;m not coding</span>, I enjoy playing
         video games, watching movies, and playing with my dog. I also enjoy{" "}
         <span className="font-medium">learning new things</span>. I am currently
         learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
+        <span className="font-medium">history and philosophy</span>. I&apos;m also
         learning how to play the guitar.
       </p>
 
