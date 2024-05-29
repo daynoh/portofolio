@@ -7,11 +7,12 @@ import Link from 'next/link'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa'
+import profilePic from '@/public/profille.png'
 
 import { useSectionInView } from '@/lib/hooks'
 import { useActiveSectionContext } from '@/context/active-section-context'
 export default function Intro() {
-    const {ref} = useSectionInView('Home',0.75)
+    const {ref} = useSectionInView('Home',0.3)
     const {setActiveSection,setTimeOfLastClick} = useActiveSectionContext()
     
   return (
@@ -28,10 +29,10 @@ export default function Intro() {
                         type: 'tween',
                         duration: 0.2
                     }}>
-                    <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+                    <Image src={profilePic}
                     alt='Musingila potrait'
-                    width="192"
-                    height="192"
+                    width="392"
+                    height="392"
                     quality="95"
                     priority = {true}
                     className='z-[1000] h-24 w-24 rounded-full
@@ -57,10 +58,9 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Musingila.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack datascientist</span> with{" "}
-        <span className="font-bold">3 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="font-bold">Hey there, I'm Musingila,.</span> I&apos;m a{" "}
+        <span className="font-bold">a seasoned full-stack datascientist</span> with{" "}
+        <span className="font-bold">3 years</span> of hands on experience. I thrive on the intersection of data science and web development, relishing the process of building robust sites and apps. My expertise lies in the realms of deep learning, machine learning, and React, particularly Next.js. Whether it's crafting intricate machine learning models or architecting seamless user experiences, I'm passionate about leveraging technology to create impactful solutions. My focus is{" "}
         <span className="underline">Deeplearning, ML & React (Next.js)</span>.
       </motion.h1>
 
@@ -95,16 +95,16 @@ export default function Intro() {
             <a href="/CV.pdf" download={true} className='group bg-white px-7 py-3 
             flex items-center gap-2 rounded-full outline-none
             focus:scale-110 hover:scale-105 
-            transition border border-black/20'> Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition'/>{" "}</a>
+            transition border border-black/20 dark:bg-white/10'> Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition'/>{" "}</a>
 
-            <a href="https://linkedin.com" target='_blank' className='bg-white text-gray-700 px-4 py-3 
+            <a href="https://www.linkedin.com/in/dennis-musingila-1951b4159/" target='_blank' className='bg-white text-gray-700 px-4 py-3 
             flex items-center gap-2 rounded-full focus:scale-[1.15] hover:text-gray-950 hover:scale-[1.15] 
-            transition border border-black/20'>
+            transition border border-black/20 dark:bg-white/10 dark:text-white/60'>
                 <BsLinkedin/>
             </a>
-            <a href="https://github.com" target='_blank' className='bg-white text-gray-700 px-4 py-3 
+            <a href="https://github.com/daynoh" target='_blank' className='bg-white text-gray-700 px-4 py-3 
             flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] 
-            transition hover:text-gray-950 border border-black/20'>
+            transition hover:text-gray-950 border border-black/20 dark:bg-white/10 dark:text-white/60'>
                 <FaGithubSquare/>
             </a>
         </motion.div>

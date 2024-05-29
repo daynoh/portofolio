@@ -17,21 +17,14 @@ export default function About() {
         transition={{delay: 0.175}}>
         <SectionHeading>About me</SectionHeading>
         <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
+        Driven by a passion for technology and fueled by data, I'm on a constant quest for innovation. My journey began with a cybersecurity bootcamp, where I dived into the world of ethical hacking. Continuing my quest for knowledge, I pursued a degree in Actuarial Science, laying the foundation for my analytical skills. Venturing into machine learning and deep learning, I explored diverse domains, mastering techniques such as natural language processing and reinforcement learning. As a part-time research collaborator, I contributed to cutting-edge projects, refining my abilities in model development and interdisciplinary collaboration. Today, as a freelance full-stack developer, I specialize in crafting data-driven solutions that leverage the power of machine learning to drive impactful outcomes. My core stack
         is{" "}
         <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
+          Python,React, Next.js, Node.js, and MySql
         </span>
         . I am also familiar with TypeScript and Prisma. I am always looking to
         learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        <span className="font-medium">full-time position</span> as a datascientist or software developer
       </p>
 
       <p>
