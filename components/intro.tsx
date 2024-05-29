@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+
+
 'use client'
 
 import Image from 'next/image'
@@ -60,7 +63,7 @@ export default function Intro() {
       >
         <span className="font-bold">Hey there, I'm Musingila,.</span> I&apos;m a{" "}
         <span className="font-bold">a seasoned full-stack datascientist</span> with{" "}
-        <span className="font-bold">3 years</span> of hands on experience. I thrive on the intersection of data science and web development, relishing the process of building robust sites and apps. My expertise lies in the realms of deep learning, machine learning, and React, particularly Next.js. Whether it's crafting intricate machine learning models or architecting seamless user experiences, I'm passionate about leveraging technology to create impactful solutions. My focus is{" "}
+        <span className="font-bold">3 years</span> of hands on experience. I thrive on the intersection of data science and web development. I specialize in{" "}
         <span className="underline">Deeplearning, ML & React (Next.js)</span>.
       </motion.h1>
 

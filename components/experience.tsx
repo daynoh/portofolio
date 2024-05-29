@@ -7,9 +7,15 @@ import { experiencesData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { useTheme } from '@/context/themeContextProvider';
 
+
+
+  // In your component:
+  
 export default function Experience() {
     const {ref, inView} = useSectionInView("Experience", 0.1)
     const {theme} = useTheme()
+   
+      
   return (
     <section
         ref={ref}
@@ -35,6 +41,7 @@ export default function Experience() {
                             '0.4rem solid rgba(255,255,255,0.5'
                         }}
                         date={item.date}
+                        // @ts-ignore
                         icon={item.icon}
                         iconStyle={{
                             background:theme === 'light' ? "white":'rgba(255,255,255,0.15)',

@@ -211,7 +211,7 @@ export const projectsData = [
   },
   {
     title: "YouTube Clone",
-    description: "Immerse yourself in the world of video streaming with our YouTube Clone, a powerful web application that showcases your proficiency in React and API integration. Leveraging the capabilities of RapidAPI, this project allows you to seamlessly fetch and display video data, replicating the core functionality of the popular YouTube platform. With a sleek and intuitive user interface, users can easily browse, search, and play videos from a vast library,",
+    description: "This project allows you to seamlessly fetch and display video data, replicating the core functionality of the popular YouTube platform. With a sleek and intuitive user interface, users can easily browse, search, and play videos from a vast library,",
     tags: [
       "React",
       "RapidAPI",
